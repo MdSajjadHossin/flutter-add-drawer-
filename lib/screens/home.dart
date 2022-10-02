@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Text("Flutter App"),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -30,7 +30,6 @@ class HomePage extends StatelessWidget {
           ),
           // IconButton(onPressed: () {}, icon: const Icon(Icons.menu_book))
         ],
-        elevation: 20,
         centerTitle: true,
         backgroundColor: Colors.purple,
         shape: const RoundedRectangleBorder(
@@ -122,16 +121,90 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.black87,
         elevation: 5.0,
-        shape: BeveledRectangleBorder(
-            borderRadius: BorderRadius.circular(20.0),
-            side: const BorderSide(
-                color: Colors.blue, width: 2.0, style: BorderStyle.solid)),
+        // shape: BeveledRectangleBorder(
+        //     borderRadius: BorderRadius.circular(20.0),
+        //     side: const BorderSide(
+        //         color: Colors.blue, width: 2.0, style: BorderStyle.solid)),
         // mini: true,
         child: const Icon(Icons.add),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.black87,
+          notchMargin: 5.0,
+          shape: const CircularNotchedRectangle(),
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Icon(
+                        Icons.home,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        "Home",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 10.0, right: 20.0, bottom: 10.0, top: 10.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Icon(
+                        Icons.shopping_cart,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        "Shop",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        "Favourite",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10.0, top: 10.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Icon(
+                        Icons.settings,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        "Settings",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              ])),
     );
   }
 }
