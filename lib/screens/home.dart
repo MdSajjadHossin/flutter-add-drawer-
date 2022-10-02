@@ -120,6 +120,18 @@ class HomePage extends StatelessWidget {
           },
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.purple,
+        elevation: 5.0,
+        shape: BeveledRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+            side: const BorderSide(
+                color: Colors.blue, width: 2.0, style: BorderStyle.solid)),
+        // mini: true,
+        child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
